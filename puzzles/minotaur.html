@@ -4,7 +4,7 @@
 <base href="..">
 <meta charset="UTF-8">
 <meta name="description" content="Puzzle Dungeon is a cell-based puzzle game.
-	Page: Puzzles - color">
+	Page: Puzzles - minotaur">
 <meta name="keywords" content="puzzles, puzzle game, dungeon,
 	atomix, stoneage, chip challenge,
 	sokoban, sokoban solver, sokoban generator,
@@ -22,7 +22,7 @@
 	rotatepic puzzle,
 	stoneage puzzle,
 	puzzle dungeon">
-<title>Puzzle Dungeon - Puzzles - color</title>
+<title>Puzzle Dungeon - Puzzles - minotaur</title>
 <style>
 html {
 	height: 100%;
@@ -351,13 +351,13 @@ a.screenshot-img {
 <a href="puzzles/"><button class="page">All Puzzles</button></a>
 <a href="puzzles/atomix.html"><button class="page">atomix</button></a>
 <a href="puzzles/barrel.html"><button class="page">barrel</button></a>
-<a href="puzzles/color.html"><button class="page current-page">color</button></a>
+<a href="puzzles/color.html"><button class="page">color</button></a>
 <a href="puzzles/fifteen.html"><button class="page">fifteen</button></a>
 <a href="puzzles/gate.html"><button class="page">gate</button></a>
 <a href="puzzles/hero.html"><button class="page">hero</button></a>
 <a href="puzzles/lock.html"><button class="page">lock</button></a>
 <a href="puzzles/memory.html"><button class="page">memory</button></a>
-<a href="puzzles/minotaur.html"><button class="page">minotaur</button></a>
+<a href="puzzles/minotaur.html"><button class="page current-page">minotaur</button></a>
 <a href="puzzles/portal.html"><button class="page">portal</button></a>
 <a href="puzzles/rotatepic.html"><button class="page">rotatepic</button></a>
 <a href="puzzles/stoneage.html"><button class="page">stoneage</button></a>
@@ -375,26 +375,32 @@ a.screenshot-img {
 </div>
 </div>
 <div id="content">
-<h1>Color Puzzle</h1>
+<h1>Minotaur Puzzle</h1>
 
 <div id="screenshots" class="screenshots-all">
-<div class="screenshot"><div class="screenshot-title">Generated Color puzzle with four rooms</div><a href="screenshots/color-puzzle-1.html"><img src="screenshots/color-puzzle-1.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Generated 9x9 Color puzzle</div><a href="screenshots/color-puzzle-2.html"><img src="screenshots/color-puzzle-2.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Solved 11x11 Color puzzle</div><a href="screenshots/color-puzzle-3.html"><img src="screenshots/color-puzzle-3.webp"></a></div>
+
 </div>
-<p>This simple yet intriguing puzzle is designed to demonstrate the
-potential of Puzzle mechanics. Some floor cells are assigned colors, and
-the number of colors and their areas are configurable. Plates on the
-floor can be pressed to alter the colors of the eight surrounding cells.
+<p>This puzzle is based on the classic Theseus and the Minotaur game.
+The maze consists of floor and wall cells, along with a single finish
+cell. Two actors navigate the maze: the player character and the
+Minotaur.
 </p>
 
-<p>Pressing a plate rotates the colors in sequence. For instance, if there
-are five colors (1 - red, 2 - green, 3 - blue, 4 - yellow, 5 - purple)
-and neighboring cells are colors 1, 3, and 5, pressing the plate changes
-them to 2, 4, and 1, respectively.
+<p>The player moves one step per turn in any of the four cardinal directions
+(or skips a move by pressing a Space), while the Minotaur moves up to two
+steps per turn according to specific rules. The Minotaur always tries to
+reach the player by prioritizing horizontal movement first - if it is not
+aligned with the player - before making a vertical move. If a move is
+blocked by a wall, the Minotaur skips that step.
 </p>
 
-<p class="goal">Turn all colored cells green by pressing the plates.</p>
+<p>Each level is designed to be challenging. A direct path to the finish
+usually results in the player being caught, forcing the player to find an
+alternative, more strategic route to outmaneuver the Minotaur and reach
+the finish safely.
+</p>
+
+<p class="goal">Reach the finish without being caught by the Minotaur.</p>
 
 </div>
 </div>

@@ -653,6 +653,22 @@ for keyboard users, a PlayStation controller for similar precise
 navigation, or a mouse for point-and-click simplicity.</p>
 <p>Goal: Clear the puzzle area by matching and removing all pairs of
 values.</p>
+<h3 id="minotaur-puzzle">Minotaur Puzzle</h3>
+<p>This puzzle is based on the classic Theseus and the Minotaur game.
+The maze consists of floor and wall cells, along with a single finish
+cell. Two actors navigate the maze: the player character and the
+Minotaur.</p>
+<p>The player moves one step per turn in any of the four cardinal
+directions (or skips a move by pressing a Space), while the Minotaur
+moves up to two steps per turn according to specific rules. The Minotaur
+always tries to reach the player by prioritizing horizontal movement
+first - if it is not aligned with the player - before making a vertical
+move. If a move is blocked by a wall, the Minotaur skips that step.</p>
+<p>Each level is designed to be challenging. A direct path to the finish
+usually results in the player being caught, forcing the player to find
+an alternative, more strategic route to outmaneuver the Minotaur and
+reach the finish safely.</p>
+<p>Goal: Reach the finish without being caught by the Minotaur.</p>
 <h3 id="portal-puzzle">Portal Puzzle</h3>
 <p>In this puzzle, there are 9 halls arranged in a 3x3 grid. Each hall
 has portals located in its corners as the only means of exit. Depending
@@ -702,6 +718,26 @@ makes this puzzle both challenging and nostalgic for fans of the
 original game.</p>
 <p>Goal: Reach the finish by utilizing the environment and its
 mechanics.</p>
+<h3 id="switch-puzzle">Switch Puzzle</h3>
+<p>This puzzle is an extension of the Gate Puzzle and Barrel Puzzle,
+introducing a new interaction between gates, plates, and barrels. The
+maze contains plates that control the state of corresponding gates. Each
+plate has a color, and pressing any plate of that color opens all gates
+of the same color. Gates are initially closed, preventing access to the
+finish.</p>
+<p>Plates can be activated in two ways: the player stepping on them, or
+a barrel being pushed onto them.</p>
+<p>Barrels must be strategically placed on plates or pushed through open
+gates to progress. If a barrel rests on a plate that controls a gate two
+cells away (with a gap of one floor between them), the gate stays open
+when the player pushes the barrel towards it. As long as the player or a
+barrel remains on a plate or gate, the gate stays open. However, once
+the player pushes the barrel away and no one remains on the plate or
+gate, the gate closes again.</p>
+<p>This dynamic interaction requires careful planning of movements,
+positioning of barrels, and plate activations to clear the path to the
+finish.</p>
+<p>Goal: Open all gates using barrels and reach the finish.</p>
 <h3 id="trivial-puzzle">Trivial Puzzle</h3>
 <p>This puzzle serves as a demonstration of Puzzle API. It is
 minimalistic and relies mostly on default settings, with the only
