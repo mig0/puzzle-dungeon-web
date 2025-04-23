@@ -21,6 +21,7 @@
 	portal puzzle,
 	rotatepic puzzle,
 	stoneage puzzle,
+	switchbox puzzle,
 	puzzle dungeon">
 <title>Puzzle Dungeon - Screenshots</title>
 <style>
@@ -75,7 +76,12 @@ div {
 }
 
 #categories {
-	padding: 15px 15px;
+	margin: 0px 0px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 100%;
 }
 
 button {
@@ -88,11 +94,11 @@ a {
 }
 
 .category {
-	margin: 20px 15px;
+	margin: auto 7px;
 	border: 1px solid black;
 	border-radius: 16px;
 	width: 160px;
-	height: 60px;
+	height: 52px;
 	background: #4e5f6d;
 	color: #e0e0e0;
 	font-size: 22px;
@@ -184,7 +190,6 @@ a {
 
 .puzzle-entry {
 	display: flex;
-	text-align: center;
 	justify-content: space-evenly;
 	align-items: center;
 	border-bottom: 1px solid rgba(16, 16, 16, 0.4);
@@ -286,55 +291,58 @@ p.goal:before {
 	text-align: left;
 }
 
-#screenshots {
+.home-medias {
 	width: 100%;
 	display: flex;
 	flex-wrap: nowrap;
-	text-align: center;
 	justify-content: center;
 	align-items: center;
 }
 
-#screenshots.screenshots-all {
+.all-medias {
+	width: 100%;
+	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	align-items: flex-start;
 }
 
-#screenshots .screenshot {
+.home-medias .media {
 	margin: 4px;
 }
 
-.screenshot img {
-	width: 100%;
-	object-fit: scale-down;
-}
-
-.screenshots-all .screenshot {
+.all-medias .media {
+	margin: 4px;
 	flex: 24%;
 	max-width: 24%;
 }
 
-.screenshot-title {
+.media img, .media video {
+	width: 100%;
+	object-fit: scale-down;
+}
+
+.media-title {
 	margin: 2px;
 	height: 20px;
+	text-align: center;
 	white-space: nowrap;
 	overflow: hidden;
 	color: #ffffa0;
 }
 
-div.screenshot-image {
+div.media-container {
 	padding: 1px;
 	width: 100%;
 	text-align: center;
 }
 
-a.screenshot-img {
+.media {
 	object-fit: scale-down;
 	margin: 0px auto;
 }
 
-.screenshot-property {
+.media-property {
 	display: inline;
 	float: right;
 	padding: 0px 10px 0px 30px;
@@ -361,7 +369,7 @@ pre.highlight  {
 <body>
 <div id="body">
 <div id="logo">
-<a href="./"><img src="puzzle-dungeon-logo.jpg" alt="Ⓟⓤⓩⓩⓛⓔ Ⓓⓤⓝⓖⓔⓞⓝ "></a>
+<a href="./"><img src="puzzle-dungeon-logo.jpg" alt="Ⓟⓤⓩⓩⓛⓔ Ⓓⓤⓝⓖⓔⓞⓝ"></a>
 </div>
 <div id="sidebar">
 <a href="screenshots/"><button class="page current-page">All Screenshots</button></a>
@@ -422,6 +430,7 @@ pre.highlight  {
 <div id="categories">
 <a href="./"><button class="category">Home</button></a>
 <a href="./puzzles/"><button class="category">Puzzles</button></a>
+<a href="./videos/"><button class="category">Videos</button></a>
 <a href="./screenshots/"><button class="category current-category">Screenshots</button></a>
 <a href="./themes/"><button class="category">Themes</button></a>
 <a href="./tutorials/"><button class="category">Tutorials</button></a>
@@ -430,58 +439,58 @@ pre.highlight  {
 <div id="content">
 <h1>Screenshots</h1>
 
-<div id="screenshots" class="screenshots-all">
-<div class="screenshot"><div class="screenshot-title">Atomix generated Glycerin level</div><a href="screenshots/atomix-gen-glycerin.html"><img src="screenshots/atomix-gen-glycerin.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Atomix generated Glycerin level (solved)</div><a href="screenshots/atomix-gen-glycerin-goal.html"><img src="screenshots/atomix-gen-glycerin-goal.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Atomix original Glycerin level</div><a href="screenshots/atomix-orig-glycerin.html"><img src="screenshots/atomix-orig-glycerin.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Atomix original Glycerin level (solved)</div><a href="screenshots/atomix-orig-glycerin-goal.html"><img src="screenshots/atomix-orig-glycerin-goal.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Atomix generated bonus level</div><a href="screenshots/atomix-puzzle-1.html"><img src="screenshots/atomix-puzzle-1.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Atomix generated bonus level (solved room)</div><a href="screenshots/atomix-puzzle-2.html"><img src="screenshots/atomix-puzzle-2.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Atomix generated Ethanol level</div><a href="screenshots/atomix-puzzle-3.html"><img src="screenshots/atomix-puzzle-3.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Atomix original Water level</div><a href="screenshots/atomix-puzzle-4.html"><img src="screenshots/atomix-puzzle-4.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Barrel puzzle with 2 barrels</div><a href="screenshots/barrel-puzzle-1.html"><img src="screenshots/barrel-puzzle-1.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Barrel puzzle with 2 barrels</div><a href="screenshots/barrel-puzzle-2.html"><img src="screenshots/barrel-puzzle-2.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Barrel puzzle with 5 barrels</div><a href="screenshots/barrel-puzzle-3.html"><img src="screenshots/barrel-puzzle-3.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Generated Color puzzle with four rooms</div><a href="screenshots/color-puzzle-1.html"><img src="screenshots/color-puzzle-1.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Generated 9x9 Color puzzle</div><a href="screenshots/color-puzzle-2.html"><img src="screenshots/color-puzzle-2.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Solved 11x11 Color puzzle</div><a href="screenshots/color-puzzle-3.html"><img src="screenshots/color-puzzle-3.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Generated 3x2 sliding puzzle</div><a href="screenshots/fifteen-puzzle-1.html"><img src="screenshots/fifteen-puzzle-1.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Generated 9-room 3x3 sliding puzzle</div><a href="screenshots/fifteen-puzzle-2.html"><img src="screenshots/fifteen-puzzle-2.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Partially solved 9-room 3x3 sliding puzzle</div><a href="screenshots/fifteen-puzzle-3.html"><img src="screenshots/fifteen-puzzle-3.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Generated 7x7 sliding puzzle</div><a href="screenshots/fifteen-puzzle-4.html"><img src="screenshots/fifteen-puzzle-4.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Gate puzzle with 2 gates and 2 plates</div><a href="screenshots/gate-puzzle-1.html"><img src="screenshots/gate-puzzle-1.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Gate puzzle with 5 gates and 5 plates</div><a href="screenshots/gate-puzzle-2.html"><img src="screenshots/gate-puzzle-2.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Gate puzzle with 4 gates and 4 plates</div><a href="screenshots/gate-puzzle-3.html"><img src="screenshots/gate-puzzle-3.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Gate puzzle with four rooms</div><a href="screenshots/gate-puzzle-4.html"><img src="screenshots/gate-puzzle-4.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Generated Hero puzzle level</div><a href="screenshots/hero-puzzle-1.html"><img src="screenshots/hero-puzzle-1.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Generated Hero puzzle level (solved)</div><a href="screenshots/hero-puzzle-2.html"><img src="screenshots/hero-puzzle-2.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Generated Hero puzzle level with strict-floors</div><a href="screenshots/hero-puzzle-3.html"><img src="screenshots/hero-puzzle-3.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Generated Hero puzzle in four rooms</div><a href="screenshots/hero-puzzle-4.html"><img src="screenshots/hero-puzzle-4.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Lock puzzle with 2 yellow and 1 blue locks</div><a href="screenshots/lock-puzzle-1.html"><img src="screenshots/lock-puzzle-1.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Lock puzzle with cleared locks</div><a href="screenshots/lock-puzzle-2.html"><img src="screenshots/lock-puzzle-2.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Lock puzzle with 3 yellow and 2 blue locks</div><a href="screenshots/lock-puzzle-3.html"><img src="screenshots/lock-puzzle-3.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Main Screen</div><a href="screenshots/main-screen.html"><img src="screenshots/main-screen.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Memory puzzle 5x3 with 7 number pairs</div><a href="screenshots/memory-puzzle-1.html"><img src="screenshots/memory-puzzle-1.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Memory puzzle 3x4 with 6 color pairs</div><a href="screenshots/memory-puzzle-2.html"><img src="screenshots/memory-puzzle-2.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Timed memory puzzle 11x11 with 60 number pairs</div><a href="screenshots/memory-puzzle-3.html"><img src="screenshots/memory-puzzle-3.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Memory puzzle with four 5x5 rooms of 12 color pairs</div><a href="screenshots/memory-puzzle-4.html"><img src="screenshots/memory-puzzle-4.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Portal puzzle with 2 portals per hall</div><a href="screenshots/portal-puzzle-1.html"><img src="screenshots/portal-puzzle-1.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Portal puzzle with 2 portals per hall (solved)</div><a href="screenshots/portal-puzzle-2.html"><img src="screenshots/portal-puzzle-2.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Portal puzzle with 3 portals per hall</div><a href="screenshots/portal-puzzle-3.html"><img src="screenshots/portal-puzzle-3.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Portal puzzle with 4 portals per hall</div><a href="screenshots/portal-puzzle-4.html"><img src="screenshots/portal-puzzle-4.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Solved rotatepic puzzle 11x11</div><a href="screenshots/rotatepic-puzzle-1.html"><img src="screenshots/rotatepic-puzzle-1.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Unsolved rotatepic puzzle 11x11</div><a href="screenshots/rotatepic-puzzle-2.html"><img src="screenshots/rotatepic-puzzle-2.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Rotatepic puzzle 7x7</div><a href="screenshots/rotatepic-puzzle-3.html"><img src="screenshots/rotatepic-puzzle-3.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Solved rotatepic puzzle 8x8</div><a href="screenshots/rotatepic-puzzle-4.html"><img src="screenshots/rotatepic-puzzle-4.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Meshed Squares - Sokoban DH2 level</div><a href="screenshots/sokoban-dh2-1.html"><img src="screenshots/sokoban-dh2-1.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Abedlike - First level in DrFrog-1 collection of sokoban levels</div><a href="screenshots/sokoban-drfog-1-1.html"><img src="screenshots/sokoban-drfog-1-1.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">First original Sokoban level</div><a href="screenshots/sokoban-level-1.html"><img src="screenshots/sokoban-level-1.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Sokoban Thinking-Rabbit-Original-Plus-Extra level</div><a href="screenshots/sokoban-think-rab-3.html"><img src="screenshots/sokoban-think-rab-3.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Level 1 in original StoneAge puzzle</div><a href="screenshots/stoneage-original-1.html"><img src="screenshots/stoneage-original-1.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Level 3 in original StoneAge puzzle</div><a href="screenshots/stoneage-original-3.html"><img src="screenshots/stoneage-original-3.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Level 4 in original StoneAge puzzle</div><a href="screenshots/stoneage-original-4.html"><img src="screenshots/stoneage-original-4.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Level 6 in original StoneAge puzzle</div><a href="screenshots/stoneage-original-6.html"><img src="screenshots/stoneage-original-6.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Level 8 in original StoneAge puzzle</div><a href="screenshots/stoneage-original-8.html"><img src="screenshots/stoneage-original-8.webp"></a></div>
+<div id="screenshots" class="all-medias">
+<div class="media"><div class="media-title">Atomix generated Glycerin level</div><a href="screenshots/atomix-gen-glycerin.html"><img src="screenshots/atomix-gen-glycerin.webp"></a></div>
+<div class="media"><div class="media-title">Atomix generated Glycerin level (solved)</div><a href="screenshots/atomix-gen-glycerin-goal.html"><img src="screenshots/atomix-gen-glycerin-goal.webp"></a></div>
+<div class="media"><div class="media-title">Atomix original Glycerin level</div><a href="screenshots/atomix-orig-glycerin.html"><img src="screenshots/atomix-orig-glycerin.webp"></a></div>
+<div class="media"><div class="media-title">Atomix original Glycerin level (solved)</div><a href="screenshots/atomix-orig-glycerin-goal.html"><img src="screenshots/atomix-orig-glycerin-goal.webp"></a></div>
+<div class="media"><div class="media-title">Atomix generated bonus level</div><a href="screenshots/atomix-puzzle-1.html"><img src="screenshots/atomix-puzzle-1.webp"></a></div>
+<div class="media"><div class="media-title">Atomix generated bonus level (solved room)</div><a href="screenshots/atomix-puzzle-2.html"><img src="screenshots/atomix-puzzle-2.webp"></a></div>
+<div class="media"><div class="media-title">Atomix generated Ethanol level</div><a href="screenshots/atomix-puzzle-3.html"><img src="screenshots/atomix-puzzle-3.webp"></a></div>
+<div class="media"><div class="media-title">Atomix original Water level</div><a href="screenshots/atomix-puzzle-4.html"><img src="screenshots/atomix-puzzle-4.webp"></a></div>
+<div class="media"><div class="media-title">Barrel puzzle with 2 barrels</div><a href="screenshots/barrel-puzzle-1.html"><img src="screenshots/barrel-puzzle-1.webp"></a></div>
+<div class="media"><div class="media-title">Barrel puzzle with 2 barrels</div><a href="screenshots/barrel-puzzle-2.html"><img src="screenshots/barrel-puzzle-2.webp"></a></div>
+<div class="media"><div class="media-title">Barrel puzzle with 5 barrels</div><a href="screenshots/barrel-puzzle-3.html"><img src="screenshots/barrel-puzzle-3.webp"></a></div>
+<div class="media"><div class="media-title">Generated Color puzzle with four rooms</div><a href="screenshots/color-puzzle-1.html"><img src="screenshots/color-puzzle-1.webp"></a></div>
+<div class="media"><div class="media-title">Generated 9x9 Color puzzle</div><a href="screenshots/color-puzzle-2.html"><img src="screenshots/color-puzzle-2.webp"></a></div>
+<div class="media"><div class="media-title">Solved 11x11 Color puzzle</div><a href="screenshots/color-puzzle-3.html"><img src="screenshots/color-puzzle-3.webp"></a></div>
+<div class="media"><div class="media-title">Generated 3x2 sliding puzzle</div><a href="screenshots/fifteen-puzzle-1.html"><img src="screenshots/fifteen-puzzle-1.webp"></a></div>
+<div class="media"><div class="media-title">Generated 9-room 3x3 sliding puzzle</div><a href="screenshots/fifteen-puzzle-2.html"><img src="screenshots/fifteen-puzzle-2.webp"></a></div>
+<div class="media"><div class="media-title">Partially solved 9-room 3x3 sliding puzzle</div><a href="screenshots/fifteen-puzzle-3.html"><img src="screenshots/fifteen-puzzle-3.webp"></a></div>
+<div class="media"><div class="media-title">Generated 7x7 sliding puzzle</div><a href="screenshots/fifteen-puzzle-4.html"><img src="screenshots/fifteen-puzzle-4.webp"></a></div>
+<div class="media"><div class="media-title">Gate puzzle with 2 gates and 2 plates</div><a href="screenshots/gate-puzzle-1.html"><img src="screenshots/gate-puzzle-1.webp"></a></div>
+<div class="media"><div class="media-title">Gate puzzle with 5 gates and 5 plates</div><a href="screenshots/gate-puzzle-2.html"><img src="screenshots/gate-puzzle-2.webp"></a></div>
+<div class="media"><div class="media-title">Gate puzzle with 4 gates and 4 plates</div><a href="screenshots/gate-puzzle-3.html"><img src="screenshots/gate-puzzle-3.webp"></a></div>
+<div class="media"><div class="media-title">Gate puzzle with four rooms</div><a href="screenshots/gate-puzzle-4.html"><img src="screenshots/gate-puzzle-4.webp"></a></div>
+<div class="media"><div class="media-title">Generated Hero puzzle level</div><a href="screenshots/hero-puzzle-1.html"><img src="screenshots/hero-puzzle-1.webp"></a></div>
+<div class="media"><div class="media-title">Generated Hero puzzle level (solved)</div><a href="screenshots/hero-puzzle-2.html"><img src="screenshots/hero-puzzle-2.webp"></a></div>
+<div class="media"><div class="media-title">Generated Hero puzzle level with strict-floors</div><a href="screenshots/hero-puzzle-3.html"><img src="screenshots/hero-puzzle-3.webp"></a></div>
+<div class="media"><div class="media-title">Generated Hero puzzle in four rooms</div><a href="screenshots/hero-puzzle-4.html"><img src="screenshots/hero-puzzle-4.webp"></a></div>
+<div class="media"><div class="media-title">Lock puzzle with 2 yellow and 1 blue locks</div><a href="screenshots/lock-puzzle-1.html"><img src="screenshots/lock-puzzle-1.webp"></a></div>
+<div class="media"><div class="media-title">Lock puzzle with cleared locks</div><a href="screenshots/lock-puzzle-2.html"><img src="screenshots/lock-puzzle-2.webp"></a></div>
+<div class="media"><div class="media-title">Lock puzzle with 3 yellow and 2 blue locks</div><a href="screenshots/lock-puzzle-3.html"><img src="screenshots/lock-puzzle-3.webp"></a></div>
+<div class="media"><div class="media-title">Main Screen</div><a href="screenshots/main-screen.html"><img src="screenshots/main-screen.webp"></a></div>
+<div class="media"><div class="media-title">Memory puzzle 5x3 with 7 number pairs</div><a href="screenshots/memory-puzzle-1.html"><img src="screenshots/memory-puzzle-1.webp"></a></div>
+<div class="media"><div class="media-title">Memory puzzle 3x4 with 6 color pairs</div><a href="screenshots/memory-puzzle-2.html"><img src="screenshots/memory-puzzle-2.webp"></a></div>
+<div class="media"><div class="media-title">Timed memory puzzle 11x11 with 60 number pairs</div><a href="screenshots/memory-puzzle-3.html"><img src="screenshots/memory-puzzle-3.webp"></a></div>
+<div class="media"><div class="media-title">Memory puzzle with four 5x5 rooms of 12 color pairs</div><a href="screenshots/memory-puzzle-4.html"><img src="screenshots/memory-puzzle-4.webp"></a></div>
+<div class="media"><div class="media-title">Portal puzzle with 2 portals per hall</div><a href="screenshots/portal-puzzle-1.html"><img src="screenshots/portal-puzzle-1.webp"></a></div>
+<div class="media"><div class="media-title">Portal puzzle with 2 portals per hall (solved)</div><a href="screenshots/portal-puzzle-2.html"><img src="screenshots/portal-puzzle-2.webp"></a></div>
+<div class="media"><div class="media-title">Portal puzzle with 3 portals per hall</div><a href="screenshots/portal-puzzle-3.html"><img src="screenshots/portal-puzzle-3.webp"></a></div>
+<div class="media"><div class="media-title">Portal puzzle with 4 portals per hall</div><a href="screenshots/portal-puzzle-4.html"><img src="screenshots/portal-puzzle-4.webp"></a></div>
+<div class="media"><div class="media-title">Solved rotatepic puzzle 11x11</div><a href="screenshots/rotatepic-puzzle-1.html"><img src="screenshots/rotatepic-puzzle-1.webp"></a></div>
+<div class="media"><div class="media-title">Unsolved rotatepic puzzle 11x11</div><a href="screenshots/rotatepic-puzzle-2.html"><img src="screenshots/rotatepic-puzzle-2.webp"></a></div>
+<div class="media"><div class="media-title">Rotatepic puzzle 7x7</div><a href="screenshots/rotatepic-puzzle-3.html"><img src="screenshots/rotatepic-puzzle-3.webp"></a></div>
+<div class="media"><div class="media-title">Solved rotatepic puzzle 8x8</div><a href="screenshots/rotatepic-puzzle-4.html"><img src="screenshots/rotatepic-puzzle-4.webp"></a></div>
+<div class="media"><div class="media-title">Meshed Squares - Sokoban DH2 level</div><a href="screenshots/sokoban-dh2-1.html"><img src="screenshots/sokoban-dh2-1.webp"></a></div>
+<div class="media"><div class="media-title">Abedlike - First level in DrFrog-1 collection of sokoban levels</div><a href="screenshots/sokoban-drfog-1-1.html"><img src="screenshots/sokoban-drfog-1-1.webp"></a></div>
+<div class="media"><div class="media-title">First original Sokoban level</div><a href="screenshots/sokoban-level-1.html"><img src="screenshots/sokoban-level-1.webp"></a></div>
+<div class="media"><div class="media-title">Sokoban Thinking-Rabbit-Original-Plus-Extra level</div><a href="screenshots/sokoban-think-rab-3.html"><img src="screenshots/sokoban-think-rab-3.webp"></a></div>
+<div class="media"><div class="media-title">Level 1 in original StoneAge puzzle</div><a href="screenshots/stoneage-original-1.html"><img src="screenshots/stoneage-original-1.webp"></a></div>
+<div class="media"><div class="media-title">Level 3 in original StoneAge puzzle</div><a href="screenshots/stoneage-original-3.html"><img src="screenshots/stoneage-original-3.webp"></a></div>
+<div class="media"><div class="media-title">Level 4 in original StoneAge puzzle</div><a href="screenshots/stoneage-original-4.html"><img src="screenshots/stoneage-original-4.webp"></a></div>
+<div class="media"><div class="media-title">Level 6 in original StoneAge puzzle</div><a href="screenshots/stoneage-original-6.html"><img src="screenshots/stoneage-original-6.webp"></a></div>
+<div class="media"><div class="media-title">Level 8 in original StoneAge puzzle</div><a href="screenshots/stoneage-original-8.html"><img src="screenshots/stoneage-original-8.webp"></a></div>
 </div>
 
 </div>

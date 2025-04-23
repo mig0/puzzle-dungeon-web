@@ -21,6 +21,7 @@
 	portal puzzle,
 	rotatepic puzzle,
 	stoneage puzzle,
+	switchbox puzzle,
 	puzzle dungeon">
 <title>Puzzle Dungeon - Themes - classic</title>
 <style>
@@ -75,7 +76,12 @@ div {
 }
 
 #categories {
-	padding: 15px 15px;
+	margin: 0px 0px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 100%;
 }
 
 button {
@@ -88,11 +94,11 @@ a {
 }
 
 .category {
-	margin: 20px 15px;
+	margin: auto 7px;
 	border: 1px solid black;
 	border-radius: 16px;
 	width: 160px;
-	height: 60px;
+	height: 52px;
 	background: #4e5f6d;
 	color: #e0e0e0;
 	font-size: 22px;
@@ -184,7 +190,6 @@ a {
 
 .puzzle-entry {
 	display: flex;
-	text-align: center;
 	justify-content: space-evenly;
 	align-items: center;
 	border-bottom: 1px solid rgba(16, 16, 16, 0.4);
@@ -286,55 +291,58 @@ p.goal:before {
 	text-align: left;
 }
 
-#screenshots {
+.home-medias {
 	width: 100%;
 	display: flex;
 	flex-wrap: nowrap;
-	text-align: center;
 	justify-content: center;
 	align-items: center;
 }
 
-#screenshots.screenshots-all {
+.all-medias {
+	width: 100%;
+	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	align-items: flex-start;
 }
 
-#screenshots .screenshot {
+.home-medias .media {
 	margin: 4px;
 }
 
-.screenshot img {
-	width: 100%;
-	object-fit: scale-down;
-}
-
-.screenshots-all .screenshot {
+.all-medias .media {
+	margin: 4px;
 	flex: 24%;
 	max-width: 24%;
 }
 
-.screenshot-title {
+.media img, .media video {
+	width: 100%;
+	object-fit: scale-down;
+}
+
+.media-title {
 	margin: 2px;
 	height: 20px;
+	text-align: center;
 	white-space: nowrap;
 	overflow: hidden;
 	color: #ffffa0;
 }
 
-div.screenshot-image {
+div.media-container {
 	padding: 1px;
 	width: 100%;
 	text-align: center;
 }
 
-a.screenshot-img {
+.media {
 	object-fit: scale-down;
 	margin: 0px auto;
 }
 
-.screenshot-property {
+.media-property {
 	display: inline;
 	float: right;
 	padding: 0px 10px 0px 30px;
@@ -361,7 +369,7 @@ pre.highlight  {
 <body>
 <div id="body">
 <div id="logo">
-<a href="./"><img src="puzzle-dungeon-logo.jpg" alt="Ⓟⓤⓩⓩⓛⓔ Ⓓⓤⓝⓖⓔⓞⓝ "></a>
+<a href="./"><img src="puzzle-dungeon-logo.jpg" alt="Ⓟⓤⓩⓩⓛⓔ Ⓓⓤⓝⓖⓔⓞⓝ"></a>
 </div>
 <div id="sidebar">
 <a href="themes/"><button class="page">All Themes</button></a>
@@ -384,6 +392,7 @@ pre.highlight  {
 <div id="categories">
 <a href="./"><button class="category">Home</button></a>
 <a href="./puzzles/"><button class="category">Puzzles</button></a>
+<a href="./videos/"><button class="category">Videos</button></a>
 <a href="./screenshots/"><button class="category">Screenshots</button></a>
 <a href="./themes/"><button class="category current-category">Themes</button></a>
 <a href="./tutorials/"><button class="category">Tutorials</button></a>
@@ -398,12 +407,17 @@ pre.highlight  {
 <tr><th>actual</th><td><img title="barrel" src="images/default/barrel.png"></td><td><img title="bones" src="images/classic/bones.png"></td><td><img title="cloud" src="images/classic/cloud.png"></td><td><img title="crack" src="images/classic/crack.png"></td><td><img title="dird" src="images/default/dird.png"></td><td><img title="dirl" src="images/default/dirl.png"></td><td><img title="dirr" src="images/default/dirr.png"></td><td><img title="diru" src="images/default/diru.png"></td><td><img title="finish" src="images/classic/finish.png"></td><td><img title="floor" src="images/classic/floor.png"></td><td><img title="floor_gray_frame" src="images/default/floor_gray_frame.png"></td><td><img title="floor_gray_tiles" src="images/default/floor_gray_tiles.png"></td><td><img title="gate0" src="images/default/gate0.png"></td><td><img title="gate1" src="images/default/gate1.png"></td><td><img title="heart" src="images/default/heart.png"></td><td><img title="key1" src="images/default/key1.png"></td><td><img title="key2" src="images/default/key2.png"></td><td><img title="lift-empty" src="images/default/lift-empty.png"></td><td><img title="lifta" src="images/default/lifta.png"></td><td><img title="liftd" src="images/default/liftd.png"></td><td><img title="lifth" src="images/default/lifth.png"></td><td><img title="liftl" src="images/default/liftl.png"></td><td><img title="liftr" src="images/default/liftr.png"></td><td><img title="liftu" src="images/default/liftu.png"></td><td><img title="liftv" src="images/default/liftv.png"></td><td><img title="lock1" src="images/default/lock1.png"></td><td><img title="lock2" src="images/default/lock2.png"></td><td><img title="might" src="images/default/might.png"></td><td><img title="plate" src="images/classic/plate.png"></td><td><img title="portal" src="images/classic/portal.png"></td><td><img title="rocks" src="images/classic/rocks.png"></td><td><img title="sand" src="images/default/sand.png"></td><td><img title="sphere-gray" src="images/default/sphere-gray.png"></td><td><img title="start" src="images/default/start.png"></td><td><img title="status" src="images/classic/status.png"></td><td><img title="sword" src="images/default/sword.png"></td><td><img title="wall" src="images/classic/wall.png"></td></tr>
 </table>
 <br>
+<h1>Videos of theme "classic"</h1>
+<div id="videos" class="all-medias">
+<div class="media"><div class="media-title">SwitchBox Puzzle levels 1-4</div><a href="videos/switchbox-puzzle-1.html"><video><source src="videos/switchbox-puzzle-1.webm"></video></a></div>
+</div>
+<br>
 <h1>Screenshots of theme "classic"</h1>
-<div id="screenshots" class="screenshots-all">
-<div class="screenshot"><div class="screenshot-title">Gate puzzle with 2 gates and 2 plates</div><a href="screenshots/gate-puzzle-1.html"><img src="screenshots/gate-puzzle-1.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Generated Hero puzzle level</div><a href="screenshots/hero-puzzle-1.html"><img src="screenshots/hero-puzzle-1.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Generated Hero puzzle level (solved)</div><a href="screenshots/hero-puzzle-2.html"><img src="screenshots/hero-puzzle-2.webp"></a></div>
-<div class="screenshot"><div class="screenshot-title">Memory puzzle with four 5x5 rooms of 12 color pairs</div><a href="screenshots/memory-puzzle-4.html"><img src="screenshots/memory-puzzle-4.webp"></a></div>
+<div id="screenshots" class="all-medias">
+<div class="media"><div class="media-title">Gate puzzle with 2 gates and 2 plates</div><a href="screenshots/gate-puzzle-1.html"><img src="screenshots/gate-puzzle-1.webp"></a></div>
+<div class="media"><div class="media-title">Generated Hero puzzle level</div><a href="screenshots/hero-puzzle-1.html"><img src="screenshots/hero-puzzle-1.webp"></a></div>
+<div class="media"><div class="media-title">Generated Hero puzzle level (solved)</div><a href="screenshots/hero-puzzle-2.html"><img src="screenshots/hero-puzzle-2.webp"></a></div>
+<div class="media"><div class="media-title">Memory puzzle with four 5x5 rooms of 12 color pairs</div><a href="screenshots/memory-puzzle-4.html"><img src="screenshots/memory-puzzle-4.webp"></a></div>
 </div>
 
 </div>

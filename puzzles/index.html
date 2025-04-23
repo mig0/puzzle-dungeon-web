@@ -21,6 +21,7 @@
 	portal puzzle,
 	rotatepic puzzle,
 	stoneage puzzle,
+	switchbox puzzle,
 	puzzle dungeon">
 <title>Puzzle Dungeon - Puzzles</title>
 <style>
@@ -75,7 +76,12 @@ div {
 }
 
 #categories {
-	padding: 15px 15px;
+	margin: 0px 0px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 100%;
 }
 
 button {
@@ -88,11 +94,11 @@ a {
 }
 
 .category {
-	margin: 20px 15px;
+	margin: auto 7px;
 	border: 1px solid black;
 	border-radius: 16px;
 	width: 160px;
-	height: 60px;
+	height: 52px;
 	background: #4e5f6d;
 	color: #e0e0e0;
 	font-size: 22px;
@@ -184,7 +190,6 @@ a {
 
 .puzzle-entry {
 	display: flex;
-	text-align: center;
 	justify-content: space-evenly;
 	align-items: center;
 	border-bottom: 1px solid rgba(16, 16, 16, 0.4);
@@ -286,55 +291,58 @@ p.goal:before {
 	text-align: left;
 }
 
-#screenshots {
+.home-medias {
 	width: 100%;
 	display: flex;
 	flex-wrap: nowrap;
-	text-align: center;
 	justify-content: center;
 	align-items: center;
 }
 
-#screenshots.screenshots-all {
+.all-medias {
+	width: 100%;
+	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	align-items: flex-start;
 }
 
-#screenshots .screenshot {
+.home-medias .media {
 	margin: 4px;
 }
 
-.screenshot img {
-	width: 100%;
-	object-fit: scale-down;
-}
-
-.screenshots-all .screenshot {
+.all-medias .media {
+	margin: 4px;
 	flex: 24%;
 	max-width: 24%;
 }
 
-.screenshot-title {
+.media img, .media video {
+	width: 100%;
+	object-fit: scale-down;
+}
+
+.media-title {
 	margin: 2px;
 	height: 20px;
+	text-align: center;
 	white-space: nowrap;
 	overflow: hidden;
 	color: #ffffa0;
 }
 
-div.screenshot-image {
+div.media-container {
 	padding: 1px;
 	width: 100%;
 	text-align: center;
 }
 
-a.screenshot-img {
+.media {
 	object-fit: scale-down;
 	margin: 0px auto;
 }
 
-.screenshot-property {
+.media-property {
 	display: inline;
 	float: right;
 	padding: 0px 10px 0px 30px;
@@ -361,7 +369,7 @@ pre.highlight  {
 <body>
 <div id="body">
 <div id="logo">
-<a href="./"><img src="puzzle-dungeon-logo.jpg" alt="Ⓟⓤⓩⓩⓛⓔ Ⓓⓤⓝⓖⓔⓞⓝ "></a>
+<a href="./"><img src="puzzle-dungeon-logo.jpg" alt="Ⓟⓤⓩⓩⓛⓔ Ⓓⓤⓝⓖⓔⓞⓝ"></a>
 </div>
 <div id="sidebar">
 <a href="puzzles/"><button class="page current-page">All Puzzles</button></a>
@@ -385,6 +393,7 @@ pre.highlight  {
 <div id="categories">
 <a href="./"><button class="category">Home</button></a>
 <a href="./puzzles/"><button class="category current-category">Puzzles</button></a>
+<a href="./videos/"><button class="category">Videos</button></a>
 <a href="./screenshots/"><button class="category">Screenshots</button></a>
 <a href="./themes/"><button class="category">Themes</button></a>
 <a href="./tutorials/"><button class="category">Tutorials</button></a>
@@ -398,6 +407,7 @@ pre.highlight  {
 <div class="puzzle-entry">
 <div class="puzzle-info">
 <h2>Atomix Puzzle</h2>
+
 
 
 <p>Atomix is a puzzle game where you construct complete molecules, ranging
@@ -428,6 +438,7 @@ structure and arrange these atoms into it.
 <h2>Barrel Puzzle (Sokoban)</h2>
 
 
+
 <p>This is a classic game with straightforward yet challenging rules. You
 guide the "warehouse keeper" ("Sokoban" in Japanese) to push barrels into
 designated slots. A barrel can only be pushed in one of four directions,
@@ -456,6 +467,7 @@ plates, requiring new strategies and solutions.
 <h2>Color Puzzle</h2>
 
 
+
 <p>This simple yet intriguing puzzle is designed to demonstrate the
 potential of Puzzle mechanics. Some floor cells are assigned colors, and
 the number of colors and their areas are configurable. Plates on the
@@ -478,6 +490,7 @@ them to 2, 4, and 1, respectively.
 <div class="puzzle-entry">
 <div class="puzzle-info">
 <h2>Fifteen Puzzle</h2>
+
 
 
 <p>The 15 Puzzle, popularized by Sam Lloyd, is a sliding puzzle. It consists
@@ -512,6 +525,7 @@ valid sequence of moves.
 <h2>Gate Puzzle</h2>
 
 
+
 <p>In this puzzle, you navigate a maze filled with plates and gates. Gates
 can either be open or closed, blocking or allowing progress. Plates are
 scattered throughout the maze and serve as triggers for the gates.
@@ -535,6 +549,7 @@ careful planning and exploration.
 <div class="puzzle-entry">
 <div class="puzzle-info">
 <h2>Hero Puzzle</h2>
+
 
 
 <p>This puzzle challenges the hero to build their power and defeat enemies.
@@ -568,6 +583,7 @@ previous floors.
 <h2>Lock Puzzle</h2>
 
 
+
 <p>In this puzzle, the maze contains keys and locks of two distinct types.
 Closed locks block your progress, and keys are scattered throughout the
 maze. Each key can open any lock of the corresponding type, but once
@@ -591,6 +607,7 @@ used wisely.
 <div class="puzzle-entry">
 <div class="puzzle-info">
 <h2>Memory Puzzle</h2>
+
 
 
 <p>This puzzle tests your memory skills within a grid of cells. The puzzle
@@ -626,6 +643,7 @@ mouse for point-and-click simplicity.
 <h2>Minotaur Puzzle</h2>
 
 
+
 <p>This puzzle is based on the classic Theseus and the Minotaur game.
 The maze consists of floor and wall cells, along with a single finish
 cell. Two actors navigate the maze: the player character and the
@@ -656,6 +674,7 @@ the finish safely.
 <div class="puzzle-entry">
 <div class="puzzle-info">
 <h2>Portal Puzzle</h2>
+
 
 
 <p>In this puzzle, there are 9 halls arranged in a 3x3 grid. Each hall has
@@ -691,6 +710,7 @@ central hall and ultimately to the finish.
 <h2>Rotatepic Puzzle</h2>
 
 
+
 <p>This puzzle involves restoring a large image that has been divided into
 square mini-image cells. Each cell is randomly rotated by 0, 90, 180, or
 270 degrees at the start. Your task is to rotate all mini-image cells to
@@ -715,6 +735,7 @@ anti-clockwise depending on the mouse button used.
 <div class="puzzle-entry">
 <div class="puzzle-info">
 <h2>Stoneage Puzzle</h2>
+
 
 
 <p>This puzzle is an accurate replication of the classic DOS game Stone Age,
@@ -748,6 +769,7 @@ game.
 <div class="puzzle-entry">
 <div class="puzzle-info">
 <h2>SwitchBox Puzzle</h2>
+
 
 
 <p>This puzzle is an extension of the Gate Puzzle and the Barrel Puzzle,
@@ -790,6 +812,7 @@ the finish.
 <div class="puzzle-entry">
 <div class="puzzle-info">
 <h2>Trivial Puzzle</h2>
+
 
 
 <p>This puzzle serves as a demonstration of Puzzle API. It is minimalistic
