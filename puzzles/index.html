@@ -242,6 +242,10 @@ p.goal:before {
 	overflow: hidden;
 }
 
+#img-table tr:first-child > th:not(:first-child) {
+	font-size: 12px;
+}
+
 #img-table .zoom,
 #img-table tr > th:not(:first-child) {
 	height: 32px;
@@ -256,7 +260,7 @@ p.goal:before {
 }
 
 .img-table-half tr > th:first-child {
-	height: 32px;
+	height: 28px;
 }
 
 .img-table-full tr > th:not(:first-child) {
@@ -264,12 +268,12 @@ p.goal:before {
 }
 
 .img-table-half tr > th:not(:first-child) {
-	width: 32px;
+	width: 28px;
 }
 
 .img-table-half tr > td {
-	width: 32px;
-	height: 32px;
+	width: 28px;
+	height: 28px;
 }
 
 .img-table-full tr > td {
@@ -278,13 +282,18 @@ p.goal:before {
 }
 
 .img-table-half img {
-	width: 32px;
-	height: 32px;
+	width: 28px;
+	height: 28px;
 }
 
 .img-table-full img {
 	width: 64px;
 	height: 64px;
+}
+
+.img-table-full img[title="char"], .img-table-full img[title="enemy"] {
+	width: 50px;
+	height: 50px;
 }
 
 #img-table .zoom {
@@ -309,11 +318,12 @@ p.goal:before {
 
 .home-medias .media {
 	margin: 4px;
+	max-width: 20%;
 }
 
 .all-medias .media {
 	margin: 4px;
-	flex: 24%;
+	flex-basis: 24%;
 	max-width: 24%;
 }
 
@@ -541,7 +551,7 @@ careful planning and exploration.
 
 <p class="goal">Reach the finish by pressing plates to open a path.</p>
 </div>
-<div class="puzzle-screenshot"><a href="puzzles/gate.html"><img src="screenshots/gate-puzzle-2.webp"></a></div>
+<div class="puzzle-screenshot"><a href="puzzles/gate.html"><img src="screenshots/gate-puzzle-4.webp"></a></div>
 </div>
 <!-- End of Gate Puzzle entry -->
 
@@ -633,7 +643,7 @@ mouse for point-and-click simplicity.
 
 <p class="goal">Clear the puzzle area by matching and removing all pairs of values.</p>
 </div>
-<div class="puzzle-screenshot"><a href="puzzles/memory.html"><img src="screenshots/memory-puzzle-1.webp"></a></div>
+<div class="puzzle-screenshot"><a href="puzzles/memory.html"><img src="screenshots/memory-puzzle-3.webp"></a></div>
 </div>
 <!-- End of Memory Puzzle entry -->
 
@@ -761,7 +771,7 @@ game.
 
 <p class="goal">Reach the finish by utilizing the environment and its mechanics.</p>
 </div>
-<div class="puzzle-screenshot"><a href="puzzles/stoneage.html"><img src="screenshots/stoneage-original-6.webp"></a></div>
+<div class="puzzle-screenshot"><a href="puzzles/stoneage.html"><img src="screenshots/stoneage-original-1.webp"></a></div>
 </div>
 <!-- End of Stoneage Puzzle entry -->
 
