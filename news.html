@@ -408,6 +408,54 @@ pre.highlight  {
 <div id="content">
 <h1>Latest News</h1>
 
+<h2>Version 0.2.0 - 2025-05-30</h2>
+<ul>
+	<li>New Solution System<ul>
+		<li>Puzzles can provide a solution from any current position.</li>
+		<li>Solutions are computed first and then replayed centrally.</li>
+		<li>The first press of KP Enter computes; the second replays.</li>
+		<li>Support in puzzles: Barrel, Gate, Color, Minotaur, RotatePic.</li>
+	</ul></li>
+	<li>New Undo System<ul>
+		<li>Press 'u' to undo one step back to the level or room start.</li>
+		<li>Full undo includes actor moves, states and cell transitions.</li>
+	</ul></li>
+	<li>New Minotaur Puzzle<ul>
+		<li>Escape the labyrinth while being chased by the Minotaur!</li>
+		<li>Auto-generated levels with configurable size and Minotaur step.</li>
+		<li>Support for pre-created maps.</li>
+		<li>Support for solution playback.</li>
+	</ul></li>
+	<li>New SwitchBox Puzzle<ul>
+		<li>Push barrels onto plates to toggle related gates and barrels.</li>
+		<li>Related gates and barrels are color-coded for clarity.</li>
+		<li>Support for pre-created maps.</li>
+		<li>Four handcrafted levels.</li>
+	</ul></li>
+	<li>New actor states: phased (semi-transparent, passable), hidden.</li>
+	<li>Character flipping is now automatic, no need for duplicate images.</li>
+	<li>Themes can now customize character, enemy, and cursor images.</li>
+	<li>Improve several themes; some now include own character and enemy.</li>
+	<li>Update all translations for supported languages.</li>
+	<li>Better support for bidirectional text, like Hebrew.</li>
+	<li>Level titles, names, and goals are now smarter and better localized.</li>
+	<li>The "press cell" event is now a formalized part of the game.<ul>
+		<li>Space key sends "press cell" for the char cell with no info.</li>
+		<li>Mouse clicks and some keys send "press cell" with button info.</li>
+	</ul></li>
+	<li>Improve joystick support with multiple PlayStation controller profiles.</li>
+	<li>Implement music fadein on start.</li>
+	<li>Key and animation handling refined for smoother gameplay.</li>
+	<li>More robust input handling at level start/end and during animations.</li>
+	<li>Update web site, including new category Videos.</li>
+	<li>Added 3 new videos demonstrating both new and existing features:<ul>
+		<li>Minotaur Puzzle</li>
+		<li>SwitchBox Puzzle</li>
+		<li>StoneAge Puzzle</li>
+	</ul></li>
+	<li>New tutorial pages on creating puzzles and themes.</li>
+</ul>
+
 <h2>Version 0.1.0 - 2025-02-24</h2>
 <ul>
 	<li>12 puzzles<ul>
@@ -434,13 +482,13 @@ pre.highlight  {
 		<li>stoneage1, stoneage2, stoneage3, stoneage4, stoneage5</li>
 	</ul></li>
 	<li>Some puzzles (Hero, StoneAge) do not have Generator yet.</li>
-	<li>Initial support for Solvers (Barrel, Gate)</li>
-	<li>Support for Hints (Atomix, Fifteen, Memory, Portal, RotatePic)</li>
-	<li>Support for precreated level collections (Atomix, Barrel, StoneAge)</li>
-	<li>Support for mouse and PlayStation controlers</li>
-	<li>Background music and sound effects</li>
-	<li>Initial support for main screen</li>
-	<li>Initial support for translations</li>
+	<li>Initial support for Solvers (Barrel, Gate).</li>
+	<li>Support for Hints (Atomix, Fifteen, Memory, Portal, RotatePic).</li>
+	<li>Support for precreated level collections (Atomix, Barrel, StoneAge).</li>
+	<li>Support for mouse and PlayStation controlers.</li>
+	<li>Background music and sound effects.</li>
+	<li>Initial support for main screen.</li>
+	<li>Initial support for translations.</li>
 </ul>
 
 </div>
