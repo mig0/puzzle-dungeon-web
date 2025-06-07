@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mig0.github.io/puzzle-dungeon-web/sitemap.txt
