@@ -281,7 +281,10 @@ https://mig0.github.io/puzzle-dungeon-web/puzzles/rotatepic.html
 https://mig0.github.io/puzzle-dungeon-web/puzzles/stoneage.html
 https://mig0.github.io/puzzle-dungeon-web/puzzles/switchbox.html
 https://mig0.github.io/puzzle-dungeon-web/puzzles/trivial.html
+https://mig0.github.io/puzzle-dungeon-web/releases/puzzle-dungeon-0.2.0.zip
+https://mig0.github.io/puzzle-dungeon-web/releases/puzzle-dungeon-0.2.1.zip
 https://mig0.github.io/puzzle-dungeon-web/resources.html
+https://mig0.github.io/puzzle-dungeon-web/robots.txt
 https://mig0.github.io/puzzle-dungeon-web/screenshots/
 https://mig0.github.io/puzzle-dungeon-web/screenshots/atomix-gen-glycerin-goal.html
 https://mig0.github.io/puzzle-dungeon-web/screenshots/atomix-gen-glycerin-goal.webp

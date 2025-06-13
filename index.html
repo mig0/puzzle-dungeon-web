@@ -539,7 +539,7 @@ floor collectibles</h2>
 </tr>
 <tr class="odd">
 <td>l</td>
-<td>Shows title and goal</td>
+<td>Show title and goal</td>
 </tr>
 <tr class="even">
 <td>m</td>
@@ -550,28 +550,76 @@ floor collectibles</h2>
 <td>Turn on/off sound</td>
 </tr>
 <tr class="even">
-<td>a</td>
-<td>Enabled/disabled animation</td>
+<td>u</td>
+<td>Undo move</td>
 </tr>
 <tr class="odd">
+<td>a</td>
+<td>Toggle move animation</td>
+</tr>
+<tr class="even">
+<td>w</td>
+<td>Win the level (cheating)</td>
+</tr>
+<tr class="odd">
+<td>Space</td>
+<td>Press cell, force teleport and more</td>
+</tr>
+<tr class="even">
 <td>Enter</td>
 <td>Activate cursor</td>
 </tr>
+<tr class="odd">
+<td>Esc</td>
+<td>Exit to the main screen</td>
+</tr>
 <tr class="even">
+<td>KP-Enter</td>
+<td>Find solution, then replay it</td>
+</tr>
+<tr class="odd">
 <td>RShift-E</td>
 <td>Set language to English</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>RShift-R</td>
 <td>Set language to Russian</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>RShift-H</td>
 <td>Set language to Hebrew</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>RShift-L</td>
 <td>Enabled/disabled show title and goal</td>
+</tr>
+<tr class="odd">
+<td>RShift-D</td>
+<td>Print current map</td>
+</tr>
+<tr class="even">
+<td>Home</td>
+<td>Simulate mouse button 1</td>
+</tr>
+<tr class="odd">
+<td>End</td>
+<td>Simulate mouse button 3</td>
+</tr>
+<tr class="even">
+<td>Insert</td>
+<td>Simulate mouse button 2</td>
+</tr>
+<tr class="odd">
+<td>Delete</td>
+<td>Simulate mouse button 6</td>
+</tr>
+<tr class="even">
+<td>PageUp</td>
+<td>Simulate mouse button 4</td>
+</tr>
+<tr class="odd">
+<td>PageDown</td>
+<td>Simulate mouse button 5</td>
 </tr>
 </tbody>
 </table>
@@ -579,11 +627,19 @@ floor collectibles</h2>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/mig0/puzzle-dungeon.git</span></code></pre></div>
 <h2 id="how-to-run">How to run</h2>
-<p>You need python3-pygame, [python3-]pgzero and python3-bitarray.</p>
-<p>No installation is needed to quickly run the game, just checkout the
-source code from github, then run:</p>
+<p>See <a href="download.html">download</a> page for instructions how to
+download the latest game package.</p>
+<p>You need python3-pygame, [python3-]pgzero and python3-bitarray. These
+may be installed using:</p>
 <div class="sourceCode" id="cb2"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./dungeon</span></span></code></pre></div>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install pgzero bitarray</span></code></pre></div>
+<p>No installation is needed to quickly run the game, just unzip the
+package, or checkout the source code from github, then run:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./dungeon</span></span></code></pre></div>
+<p>On Windows, run <strong>dungeon.bat</strong>.</p>
+<p>On Unix systems, you may optionally install it using “make
+install”.</p>
 <h2 id="puzzles">Puzzles</h2>
 <h3 id="atomix-puzzle">Atomix Puzzle</h3>
 <p>Atomix is a puzzle game where you construct complete molecules,
