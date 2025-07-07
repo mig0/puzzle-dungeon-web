@@ -405,7 +405,6 @@ https://puzzle-dungeon.github.io/screenshots/switchbox-puzzle-3.webp
 https://puzzle-dungeon.github.io/screenshots/switchbox-puzzle-4.html
 https://puzzle-dungeon.github.io/screenshots/switchbox-puzzle-4.webp
 https://puzzle-dungeon.github.io/sidebar-bg.jpg
-https://puzzle-dungeon.github.io/sitemap.txt
 https://puzzle-dungeon.github.io/themes/
 https://puzzle-dungeon.github.io/themes/ancient1.html
 https://puzzle-dungeon.github.io/themes/ancient2.html
