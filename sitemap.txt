@@ -59,6 +59,7 @@ https://puzzle-dungeon.github.io/images/default/liftd.png
 https://puzzle-dungeon.github.io/images/default/lift-empty.png
 https://puzzle-dungeon.github.io/images/default/lifth.png
 https://puzzle-dungeon.github.io/images/default/liftl.png
+https://puzzle-dungeon.github.io/images/default/liftn.png
 https://puzzle-dungeon.github.io/images/default/liftr.png
 https://puzzle-dungeon.github.io/images/default/liftu.png
 https://puzzle-dungeon.github.io/images/default/liftv.png
